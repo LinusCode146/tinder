@@ -14,12 +14,19 @@ export default async function Navbar () {
 
     return (
         <main className={styles.container}>
-            <div className={styles.logo}>
-                <Link href={'/'}>SecureKey</Link>
+            <div>
+                <Link href={'/'}>
+                    <img className={styles.chatSymbol} src={"./img/chats.png"} alt={'chats'}/>
+                </Link>
+            </div>
+            <div>
+                <Link href={'/'}>
+                    <img className={styles.chatSymbol} src={"./img/cards.png"} alt={'persons'}/>
+                </Link>
             </div>
             <div className={styles.authLinks}>
-                {!session?.user && <LoginBtn />}
-                {session?.user && <LogoutBTN image={session.user?.image || ""}/>}
+                {!session?.user && <LoginBtn/>}
+                {session?.user && <LogoutBTN/>}
             </div>
         </main>
     )

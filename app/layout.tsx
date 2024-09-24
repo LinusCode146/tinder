@@ -26,8 +26,8 @@ export default function RootLayout({
       <div className="bg">
         <QueryWrapper>
           <AuthContext>
-              <Navbar />
               {children}
+              <Navbar />
           </AuthContext>
         </QueryWrapper>
       </div>

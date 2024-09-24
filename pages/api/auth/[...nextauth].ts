@@ -5,7 +5,7 @@ import prisma from '../../../prisma/client'
 
 console.log(process.env);
 
-export const authOptions = {
+export const authOptions: any = {
     adapter: PrismaAdapter(prisma),
     secret: process.env.AUTH_SECRET,
     providers: [
